@@ -10,13 +10,13 @@ using System.Reflection.Metadata.Ecma335;
 namespace guestBook
 {
   
-    internal class showAllPosts
+    internal class ShowAllPosts
     {
         
         public void allPosts() {
 
             //Create a list for posts
-            var posts = new List<newPost>();
+            var posts = new List<NewPost>();
 
             // see if file exists
             if (File.Exists("posts.json"))
@@ -24,7 +24,7 @@ namespace guestBook
                 // Save json to file
                 string json = File.ReadAllText("posts.json");
                 // deserialize with List of type newPost (name and post)
-                posts = JsonConvert.DeserializeObject<List<newPost>>(json);
+                posts = JsonConvert.DeserializeObject<List<NewPost>>(json);
                 for (int i = 0; i < posts.Count; i++)
                 {
                     var post = posts[i];

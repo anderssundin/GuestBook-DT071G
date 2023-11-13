@@ -10,7 +10,7 @@ namespace guestBook
 {
 
 
-    class newPost
+    class NewPost
     {
         //Name of author
         public string name { get; set; }
@@ -22,18 +22,18 @@ namespace guestBook
         {
 
             //Create a list for posts
-            List<newPost> posts = new List<newPost>();
+            List<NewPost> posts = new List<NewPost>();
            
             // see if file exists
             if (File.Exists("posts.json")) 
             {
                 string json = File.ReadAllText("posts.json");
-                posts = JsonConvert.DeserializeObject<List<newPost>>(json);
+                posts = JsonConvert.DeserializeObject<List<NewPost>>(json);
             }
 
             // Add new post to file
 
-            posts.Add(new newPost { name = author, post = content });
+            posts.Add(new NewPost { name = author, post = content });
 
             // Convert to JSON
 
@@ -42,8 +42,10 @@ namespace guestBook
             //Write to the file
 
             File.WriteAllText("posts.json", newJson);
-
-            Console.WriteLine($"Nytt inlägg skapat av {author}: {content}. \n Klicka på någon knapp för att återvända till menyn");
+            Console.Clear();
+            Console.WriteLine($"\n    Nytt inlägg skapat av {author}:\n \n    {content}. \n\n " +
+                $"----------------------------------------------------- \n\n" +
+                $"Klicka på någon knapp för att återvända till menyn");
         }
     }
 
