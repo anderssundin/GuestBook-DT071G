@@ -2,7 +2,12 @@
 using System.Collections.Generic;
 using guestBook;
 
-
+/*
+ Lösning skapad av Anders Sundin
+ Moment 3 i kursen DT071G
+ HT-23
+ olsu2201
+ */
 
 
 

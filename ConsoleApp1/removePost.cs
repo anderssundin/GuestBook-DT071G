@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 using System.IO;
 using System.Dynamic;
-
+/*
+ Lösning skapad av Anders Sundin
+ Moment 3 i kursen DT071G
+ HT-23
+ olsu2201
+ */
 namespace guestBook
 {
     internal class RemovePost
