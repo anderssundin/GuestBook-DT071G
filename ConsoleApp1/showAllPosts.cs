@@ -33,7 +33,7 @@ namespace guestBook
                 for (int i = 0; i < posts.Count; i++)
                 {
                     var post = posts[i];
-                    Console.WriteLine($" [{i}] {post.name} - {post.post}");
+                    Console.WriteLine($" [{i}] {post.Name} - {post.Post}");
                 }
             }
         }

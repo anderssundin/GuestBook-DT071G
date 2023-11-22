@@ -31,7 +31,7 @@ class Program
             Console.WriteLine("X Avsluta \n");
             
             //display stored posts
-            var allPosts = new ShowAllPosts();
+            ShowAllPosts allPosts = new ShowAllPosts();
             allPosts.allPosts();
         }
         printOptions();
@@ -50,20 +50,20 @@ class Program
                     Console.Clear();
                     validChoice = true;
                    // get instanse of newPost
-                    var addPost = new NewPost();
+                    NewPost addPost = new NewPost();
                     // get name input
                     Console.WriteLine("Vad heter du?");
-                    addPost.name = Console.ReadLine();
-                    if (addPost.name.Length > 0)
+                    addPost.Name = Console.ReadLine();
+                    if (addPost.Name.Length > 0)
                     {
                         // get post input
-                        Console.WriteLine($" Hej {addPost.name}. Skriv ditt inlägg: ");
-                        addPost.post = Console.ReadLine();
+                        Console.WriteLine($" Hej {addPost.Name}. Skriv ditt inlägg: ");
+                        addPost.Post = Console.ReadLine();
 
-                        if (addPost.post.Length  > 0)
+                        if (addPost.Post.Length  > 0)
                         {
                             // write to file
-                            addPost.addNewPost(addPost.name, addPost.post);
+                            addPost.addNewPost(addPost.Name, addPost.Post);
                         }
                         else 
                         {
@@ -88,7 +88,7 @@ class Program
                     Console.WriteLine("Välj post att radera genom att välja dess nummer. \n Klicka på 'b' för att komma till huvudmenyn");
                        
                         // show all posts
-                        var allPosts = new ShowAllPosts();
+                        ShowAllPosts allPosts = new ShowAllPosts();
                         allPosts.allPosts();
 
                         string input = Console.ReadLine();
@@ -98,7 +98,7 @@ class Program
                             validIndex = true;
                         } else
                         {
-                          var removePost = new RemovePost();
+                          RemovePost removePost = new RemovePost();
                            if (removePost.deleteIndex(input)) 
                             { 
                             validIndex = true;

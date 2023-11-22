@@ -19,11 +19,21 @@ namespace guestBook
 
     class NewPost
     {
-        //Name of author
-        public string name { get; set; }
-        //Post content
-        public string post { get; set; }
 
+        private string name;
+        private string post;
+        // SetName of author
+        public string Name
+        {
+            get { return name; }
+            set { name = value; }
+        }
+        //Post content
+         public string Post
+        {
+            get { return post; }
+            set { post = value; }
+        }
         // Method for saving new post
         public void addNewPost(string author, string content)
         {
